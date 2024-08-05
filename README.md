@@ -37,7 +37,7 @@ Run Spring Boot app using Maven:
 
 ## generate test report
 ```
-For generatting the test report we have run the command
+For generatting the test report we have to run the command
 mvn clean install 
 and we will get test report file for the following path 
 /RetailStoreDiscounts/RetailStoreData/target/jacoco-ut/index.html
