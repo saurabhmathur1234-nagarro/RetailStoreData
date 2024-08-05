@@ -44,7 +44,8 @@ Ensure that the RequestDto class is defined with the following properties:
 Since the items are groceries, the total bill amount is returned as is: 200.0
 
 
-CURL to test the application :
+## CURL to test the application :
+```
 end point url is : (POST) http://localhost:9001/api/discount/calculate
 curl --location 'http://localhost:9001/api/discount/calculate' \
 --header 'Content-Type: application/json' \
@@ -54,3 +55,4 @@ curl --location 'http://localhost:9001/api/discount/calculate' \
     "billAmount": false,
     "groceriesBillAmount": 990.0
 }'
+```
