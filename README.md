@@ -8,7 +8,16 @@ The RetailDiscountServiceImpl class is part of the retailStoreDiscounts applicat
 ## Technology used
 Java, springBoot
 
-## UML Diagram
+## Approach
+```
+Steps to generate the discounted bill
+1 USer will select the UserID 
+2 User will add total groceries amount bill
+3 User will add total other amount bill
+
+This code will check the userType and accordingly calculate the percentage-based discount and for every $100 on the bill, there would be a $ 5 discount and final we will add both discounted amount.
+And will subtract the discounted amount from total amount and return back.
+```
 <img width="581" alt="image" src="https://github.com/user-attachments/assets/3202cc25-1810-48fa-b36a-0e54d71029e7">
 
 
@@ -33,19 +42,7 @@ and we will get test report file for the following path
 /RetailStoreDiscounts/RetailStoreData/target/jacoco-ut/index.html
 ```
 
-## Features
-Percentage Discounts: Applies different percentage-based discounts based on the user's type.
-Flat Discounts: Provides a flat discount for every $100 spent.
-Groceries Handling: Special handling for grocery items where percentage-based discounts do not apply.
-
-## Methods
-calculateDiscount(RequestDto request): Calculates the final discount based on the request details.
-
-
-RequestDto
-Ensure that the RequestDto class is defined with the following properties:
-
-Since the items are groceries, the total bill amount is returned as is: 200.0
+## 
 
 
 ## CURL to test the application :
