@@ -8,6 +8,10 @@ The RetailDiscountServiceImpl class is part of the retailStoreDiscounts applicat
 ## Technology used
 Java, springBoot
 
+## UML Diagram
+<img width="581" alt="image" src="https://github.com/user-attachments/assets/3202cc25-1810-48fa-b36a-0e54d71029e7">
+
+
 ## Build and run
 ```
 In order to run and build the projedct you need to clone the project
