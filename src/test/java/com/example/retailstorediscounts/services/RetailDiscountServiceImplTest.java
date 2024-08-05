@@ -1,7 +1,7 @@
-package com.example.retailStoreDiscounts.services;
+package com.example.retailstorediscounts.services;
 
-import com.example.retailStoreDiscounts.dto.RequestDto;
-import com.example.retailStoreDiscounts.services.impl.RetailDiscountServiceImpl;
+import com.example.retailstorediscounts.dto.RequestDto;
+import com.example.retailstorediscounts.services.impl.RetailDiscountServiceImpl;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -11,12 +11,11 @@ public class RetailDiscountServiceImplTest {
     @Test
     void testCalculateDiscountForEmployee() {
         RequestDto request = new RequestDto();
-        request.setUserType("employee");
-        request.setIsGroceries("false");
+        request.setUserId(1L);
+        request.setGroceriesBillAmount(100);
         request.setBillAmount(990.0);
-        request.setYearsAsCustomer(1);
 
-        double expectedDiscount = 648.0;
+        double expectedDiscount = 743;
         double actualDiscount = retailDiscountService.calculateDiscount(request);
 
         assertEquals(expectedDiscount, actualDiscount, 0.01);
@@ -25,12 +24,11 @@ public class RetailDiscountServiceImplTest {
     @Test
     void testCalculateDiscountForAffiliate() {
         RequestDto request = new RequestDto();
-        request.setUserType("affiliate");
-        request.setIsGroceries("false");
+        request.setUserId(2L);
+        request.setGroceriesBillAmount(200);
         request.setBillAmount(150.0);
-        request.setYearsAsCustomer(1);
 
-        double expectedDiscount = 130.0;
+        double expectedDiscount = 320;
         double actualDiscount = retailDiscountService.calculateDiscount(request);
 
         assertEquals(expectedDiscount, actualDiscount, 0.01);
@@ -39,12 +37,11 @@ public class RetailDiscountServiceImplTest {
     @Test
     void testCalculateDiscountForOldCustomer() {
         RequestDto request = new RequestDto();
-        request.setUserType("customer");
-        request.setIsGroceries("false");
+        request.setUserId(3L);
+        request.setGroceriesBillAmount(300);
         request.setBillAmount(720);
-        request.setYearsAsCustomer(1);
 
-        double expectedDiscount = 685;
+        double expectedDiscount = 934;
         double actualDiscount = retailDiscountService.calculateDiscount(request);
 
         assertEquals(expectedDiscount, actualDiscount, 0.01);
@@ -53,12 +50,11 @@ public class RetailDiscountServiceImplTest {
     @Test
     void testCalculateDiscountForGroceries() {
         RequestDto request = new RequestDto();
-        request.setUserType("employee");
-        request.setIsGroceries("true");
+        request.setUserId(4L);
+        request.setGroceriesBillAmount(100);
         request.setBillAmount(500.0);
-        request.setYearsAsCustomer(1);
 
-        double expectedDiscount = 500.0; // No discount for groceries
+        double expectedDiscount = 420; // No discount for groceries
         double actualDiscount = retailDiscountService.calculateDiscount(request);
 
         assertEquals(expectedDiscount, actualDiscount, 0.01);

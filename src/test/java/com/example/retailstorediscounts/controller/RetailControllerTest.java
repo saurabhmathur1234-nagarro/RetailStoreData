@@ -1,12 +1,9 @@
-package com.example.retailStoreDiscounts.controller;
+package com.example.retailstorediscounts.controller;
 
-import com.example.retailStoreDiscounts.dto.RequestDto;
-import com.example.retailStoreDiscounts.services.RetailDiscountService;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import org.junit.jupiter.api.BeforeEach;
+import com.example.retailstorediscounts.dto.RequestDto;
+import com.example.retailstorediscounts.services.RetailDiscountService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Test;
-import org.mockito.MockitoAnnotations;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -19,8 +16,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @PropertySource("classpath:application.testcase.properties")
 @EnableConfigurationProperties
@@ -39,10 +36,8 @@ public class RetailControllerTest {
     void testCalculateDiscount() throws Exception {
         // Prepare test data
         RequestDto requestDto = new RequestDto();
-        requestDto.setUserType("employee");
-        requestDto.setIsGroceries("false");
+        requestDto.setGroceriesBillAmount(100);
         requestDto.setBillAmount(990.0);
-        requestDto.setYearsAsCustomer(3);
 
         // Define the behavior of the mock service
         when(retailDiscountService.calculateDiscount(any(RequestDto.class))).thenReturn(75.0);

@@ -1,4 +1,4 @@
-package com.example.retailStoreDiscounts.entity;
+package com.example.retailstorediscounts.entity;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -7,7 +7,6 @@ import lombok.Setter;
 @Getter
 public class BillInfoEntity {
 
-    private Long id;
     private double amount;
     private boolean isGroceries;
 }

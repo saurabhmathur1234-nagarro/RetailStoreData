@@ -1,7 +1,7 @@
-package com.example.retailStoreDiscounts.controller;
+package com.example.retailstorediscounts.controller;
 
-import com.example.retailStoreDiscounts.dto.RequestDto;
-import com.example.retailStoreDiscounts.services.RetailDiscountService;
+import com.example.retailstorediscounts.dto.RequestDto;
+import com.example.retailstorediscounts.services.RetailDiscountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
