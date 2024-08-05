@@ -8,6 +8,14 @@ The RetailDiscountServiceImpl class is part of the retailStoreDiscounts applicat
 ## Technology used
 Java, springBoot
 
+## Build and run
+In order to run and build the projedct you need to clone the project
+cd clone 
+git checckout master
+From terminal run build command
+mvn clean install
+
+
 Features
 Percentage Discounts: Applies different percentage-based discounts based on the user's type.
 Flat Discounts: Provides a flat discount for every $100 spent.
