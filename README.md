@@ -55,3 +55,16 @@ yearsAsCustomer: 1
 Calculation:
 
 Since the items are groceries, the total bill amount is returned as is: 200.0
+
+
+CURL to test the application :
+end point url is : (POST) http://localhost:9001/api/discount/calculate
+curl --location 'http://localhost:9001/api/discount/calculate' \
+--header 'Content-Type: application/json' \
+--header 'x-api-key: 0kXprL6RIP5iahdPD8zhSHO3PFyv3dL6TdYnxW8g' \
+--data '{
+    "userType": "employee",
+    "isGroceries": false,
+    "billAmount": 990.0,
+    "yearsAsCustomer": 1
+}'
