@@ -41,10 +41,10 @@ public class RetailDiscountServiceImplTest {
         RequestDto request = new RequestDto();
         request.setUserType("customer");
         request.setIsGroceries("false");
-        request.setBillAmount(200.0);
-        request.setYearsAsCustomer(3);
+        request.setBillAmount(720);
+        request.setYearsAsCustomer(1);
 
-        double expectedDiscount = 200.0 - (200.0 * 5.0 / 100) - (200.0 / 100) * 5;
+        double expectedDiscount = 685;
         double actualDiscount = retailDiscountService.calculateDiscount(request);
 
         assertEquals(expectedDiscount, actualDiscount, 0.01);
