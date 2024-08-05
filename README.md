@@ -15,7 +15,8 @@ Steps to generate the discounted bill
 2 User will add total groceries amount bill
 3 User will add total other amount bill
 
-This code will check the userType and accordingly calculate the percentage-based discount and for every $100 on the bill, there would be a $ 5 discount and final we will add both discounted amount.
+This code will check the userType and accordingly calculate the percentage-based discount and for every
+$100 on the bill, there would be a $ 5 discount and final we will add both discounted amount.
 And will subtract the discounted amount from total amount and return back.
 ```
 <img width="581" alt="image" src="https://github.com/user-attachments/assets/3202cc25-1810-48fa-b36a-0e54d71029e7">
