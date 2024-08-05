@@ -22,3 +22,36 @@ calculateFlatDiscount(double amount): Calculates a flat discount of $5 for every
 
 RequestDto
 Ensure that the RequestDto class is defined with the following properties:
+
+
+
+Discount Rules
+Employee: 30% discount on the total bill.
+Affiliate: 10% discount on the total bill.
+Customer: 5% discount if the customer has been with the store for more than 2 years.
+Groceries: No percentage discounts apply; the total bill amount is returned as is.
+Flat Discount: An additional $5 discount for every $100 on the bill.
+Examples
+Example 1: Employee Discount
+Request:
+
+userType: "employee"
+isGroceries: "false"
+billAmount: 990.0
+yearsAsCustomer: 1
+Calculation:
+
+Percentage Discount: 30% of 990.0 = 297.0
+Flat Discount: (990.0 / 100) * 5 = 45.0
+Total Discount: 297.0 + 45.0 = 342.0
+Final Amount: 990.0 - 342.0 = 648.0
+Example 2: Grocery Items
+Request:
+
+userType: "employee"
+isGroceries: "true"
+billAmount: 200.0
+yearsAsCustomer: 1
+Calculation:
+
+Since the items are groceries, the total bill amount is returned as is: 200.0
