@@ -1,7 +1,12 @@
 # RetailStoreData
 
-Overview
+## Overview
+As part of this project we are calculating discounts on the basis of user type and as response we are getting final percentage-based discounts on a bill.
 The RetailDiscountServiceImpl class is part of the retailStoreDiscounts application and implements the RetailDiscountService interface. It provides functionality to calculate discounts based on various criteria for a retail store.
+
+
+## Technology used
+Java, springBoot
 
 Features
 Percentage Discounts: Applies different percentage-based discounts based on the user's type.
